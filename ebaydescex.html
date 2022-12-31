@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Zack McMann">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        :root {
+            --theme-color-white: #F3F3F3;
+            --theme-color-lblue: #93A1D4;
+            --theme-color-blue: #334FB4;
+            --theme-color-dblue: #233163;
+            --theme-color-black: #121212;
+        }
+
+        .material-icons {
+            font-size: 0.7rem;
+        }
+
+        .logo_small {
+            height: 100px;
+            width: 100px;
+            image-rendering: smooth;
+        }
+
+        .fancy {
+            font-style: italic;
+        }
+
+        body {
+            background-color: var(--theme-color-white);
+            margin: 0;
+            font-family: 'Daytona', 'Trebuchet MS', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Azul', 'Trebuchet MS', sans-serif;
+        }
+
+        ul {
+            padding-left: 10%;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--theme-color-white);
+        }
+
+        header {
+            display: inline-flex;
+            margin-left: 1rem;
+        }
+
+        .header_container {
+            width: 100%;
+            background-color: var(--theme-color-black);
+        }
+
+        header nav {
+            display: grid;
+            place-items: center;
+        }
+
+        .menu {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        .row {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .row:hover {
+            color: var(--theme-color-white);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .refund_dropdown {
+            display: none;
+            position: absolute;
+            min-width: 10rem;
+            background-color: white;
+            box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .refund_dropdown a {
+            color: var(--theme-color-black);
+            display: block;
+            padding: 1rem 0.5rem;
+        }
+
+        .refund_dropdown a:hover {
+            background-color: var(--theme-color-white);
+        }
+
+        .dropdown:hover .refund_dropdown {
+            display: block;
+        }
+
+        .body_container {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            background-color: var(--theme-color-white);
+        }
+
+        .product_desc_container {
+            background-color: white;
+            padding: .4rem .75rem;
+        }
+
+        .policy_desc_container {
+            background-color: white;
+            padding: .4rem .75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer_container {
+            display: inline-flex;
+            background-color: var(--theme-color-blue);
+            height: 20%;
+            width: 100%;
+            color: rgb(205, 205, 205);
+        }
+
+        .mission_container {
+            width: 40%;
+            float: left;
+            display: block;
+            padding: 1rem 2rem;
+        }
+
+        .footer_nav_container {
+            width: 40%;
+            float: left;
+            display: block;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        
+        .footer_nav_container nav a {
+            display: block;
+            padding-bottom: 0.25rem;
+            color:rgb(205, 205, 205);
+        }
+
+        .footer_nav_container nav a:hover {
+            color: var(--theme-color-white);
+            text-decoration: underline;
+        }
+
+        .footer_nav_container p {
+            font-size: 0.5rem;
+            color:rgb(205, 205, 205);
+        }
+
+    </style>
+</head>
+
+<!--Start Body-->
+<body>
+
+<!--Header-->
+<div class="header_container" id="top">
+    <header>
+        <img src="https://cdn.shopify.com/s/files/1/0568/3868/4772/files/DiecastLogo_white_test.png?v=1645484648" class="logo_small" loading="lazy"/>
+    </header>
+</div>
+
+<!--Body-->
+<div class="body_container">
+    <div id="main_desc">
+    
+        <h1>Product Specification</h1>
+
+        <div class="product_desc_container">
+            <p>[Paste Description</p>
+
+            <ul>
+                <li>Manufacturer: </li>
+                <li>Make: </li>
+                <li>Model: </li>
+                <li>Material: </li>
+                <li>Size: </li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="policies">
+        <h1>Policy Information</h1>
+        
+        <div class="policy_desc_container">
+            <h2 id="shipping">Shipping</h2>
+            <p>All our products are shipped in sturdy cardboard boxes with packing material as needed by USPS First Class mail. Diecast Collectors LLP is not liable for any shipping delays, loses, or damages obtained during the shipping process. If you receive a damaged product, contact your local USPS to recover your losses before contacting us. If you have any further questions regarding our shipping policy or returns send us a message.</p>
+        </div>
+
+        <div class="policy_desc_container">
+            <h2 id="refunds">Refunds</h2>
+            <p>We have a 30-day return policy, which means you have 30 days after receiving your item to request a return.
+                To be eligible for a return, your item must be in the same condition that you received it and in its original packaging. You’ll also need the receipt or proof of purchase.
+                Message us to start a return. If your return is accepted, we’ll send you a return shipping label, as well as instructions on how and where to send your package. Items sent back to us without first requesting a return will not be accepted.</p>
+            <br>
+            <h4 id="ref_approval" class="fancy">Refund Approval</h4>
+            <p>We will notify you once we’ve received and inspected your return, and let you know if the refund was approved or not. If approved, you’ll be automatically refunded on your original payment method. Please remember it can take some time for your bank or credit card company to process and post the refund too.</p>
+            <br>
+            <h4 id="ref_preorders" class="fancy">Preorders</h4>
+            <p>If you have purchased a car on preorder with us, you are free to request a refund for that car anytime prior to its shipment to you. Once a car has been shipped, the aforementioned 30-day return policy takes effect.</p>
+        </div>
+
+        <div class="policy_desc_container">
+            <h2 id="damages">Damages and issues</h2>
+            <p>Please inspect your order upon reception and contact us immediately if the item is defective, damaged or if you receive the wrong item so that we can evaluate the issue and make it right.</p>
+        </div>
+
+        <div class="policy_desc_container">
+            <h2 id="exceptions">Exceptions / Non-Returnable Items</h2>
+            <p>Unfortunately, we cannot accept returns on sale items or gift cards.</p>
+        </div>
+
+        <div class="policy_desc_container">
+            <h2 id="exchanges">Exchanges</h2>
+            <p>We do not currently accept exchanges.</p>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<div class="footer_container">
+    <footer>
+        <div class="mission_container">
+            <h3>Our mission</h3>
+            <br>
+            <p>Provide quality models for any level of diecast collector and to enrich the collecting experience with a touch of automotive history.</p>
+            <br>
+            <p>© 2022, Diecast Collectors</p>
+        </div>
+        
+    </footer>
+</div>
+</body>
